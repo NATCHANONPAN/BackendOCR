@@ -3,11 +3,11 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api.py"
+      "dest": "api.py"
     }
   ],
   "env": {
     "PYTHONUNBUFFERED": "1"
   },
-  "web": "uvicorn api:app --host 0.0.0.0 --port 5000"
+  "devCommand": "uvicorn api:app --host 0.0.0.0 --port 5000"
 }
