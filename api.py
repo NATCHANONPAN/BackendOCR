@@ -53,6 +53,9 @@ def recognition(imgs: List[np.ndarray]) -> List[str]:
 def detection(IMG_PATH, OUT_DIR_PATH):
     return detector(IMG_PATH, OUT_DIR_PATH)
 
+@app.get('/')
+def root():
+    return {"message" : "Hello World"}
 
 @app.post('/ocr_test')
 def ocr_test(image: bytes = File(...)):
